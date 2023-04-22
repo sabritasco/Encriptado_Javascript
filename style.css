@@ -1,0 +1,164 @@
+body {
+  background-color: #f3f5fc;
+}
+main {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo {
+  margin: 1.5em 0 0em 3em;
+}
+.entrada-acciones {
+  width: 60%;
+  padding: 1em;
+  margin-top: 3em;
+  clear: both;
+}
+.entrada {
+  border: none;
+  background: none;
+  color: #0a3871;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 2em;
+  width: 90%;
+  height: 10em;
+}
+.entrada::placeholder {
+  color: #0a3871;
+  font-family: "Inter", sans-serif;
+  font-family: "Inter", sans-serif;
+  font-size: 1em;
+}
+.entrada:focus {
+  /*outline: none;*/
+}
+
+.resultado {
+  width: 30%;
+  text-align: center;
+  border-radius: 1em;
+  display: inline-block;
+  padding: 5em 0;
+  margin: 1em;
+}
+
+.acciones {
+  margin: 5em 0 0;
+}
+
+.imgresultado {
+  max-width: 95%;
+}
+
+.mensaje1 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  color: #343a40;
+  margin: 1em 0;
+}
+.mensaje2 {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: #343a40;
+  margin: 1em 0;
+}
+
+.advertencia {
+  font-family: "Inter", sans-serif;
+  color: #495057;
+  font-weight: 400;
+  font-size: 0.7em;
+  margin-bottom: 0.5em;
+}
+#encriptar {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  background: #0a3871;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  width: 15em;
+  height: 3.5em;
+  border-radius: 0.9em;
+}
+
+#desencriptar {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  background: #d8dfe8;
+  color: #0a3871;
+  border: 0.1em solid #0a3871;
+  cursor: pointer;
+  text-align: center;
+  width: 15em;
+  height: 3.5em;
+  border-radius: 0.9em;
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    height: 100%;
+    display: block;
+  }
+  .logo {
+    margin: 2.5em 0 0em 2em;
+  }
+  .entrada-acciones {
+    width: 100%;
+    text-align: center;
+    margin-top: 1.5em;
+    padding: 0;
+  }
+  .entrada {
+    font-size: 1.5em;
+    width: 97%;
+    height: 10em;
+    padding: 0;
+    margin: 1em 0 0 0;
+  }
+  .advertencia {
+    text-align: start;
+    margin-left: 2em;
+  }
+  .resultado {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+  }
+  .imgresultado {
+    display: none;
+  }
+  .mensajes {
+    background: #ffffff;
+    border-radius: 1em;
+    padding: 1em;
+    margin: 1em;
+  }
+  #encriptar {
+    width: 48%;
+    padding: 0;
+  }
+  #desencriptar {
+    width: 48%;
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .advertencia {
+    text-align: start;
+    margin-left: 1em;
+  }
+
+  #encriptar {
+    width: 97%;
+  }
+  #desencriptar {
+    width: 97%;
+    margin: 1em 0;
+  }
+}

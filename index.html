@@ -1,12 +1,117 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Encriptador de texto</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    
+
+    <header>
+        <div class="navbar">
+            <nav>
+                <div class="logo">
+                    <img src="imagenes/Logo.png" alt="">
+                </div>
+            </nav>
+        </div>
+    </header>
+
+
+
+    <main>
+
+
+        <section class="entrada-acciones">
+            <textarea class="entrada" placeholder="Ingrese el texto aqui" name="entrada" id="entrada"></textarea>
+
+
+            <div class="acciones">
+                <p class="advertencia">&#128712; Solo letras minúsculas y sin acentos</p>
+
+                <div class="botones">
+                    <button id="encriptar">Encriptar</button>
+                    <button id="desencriptar">Desencriptar</button>
+                </div>
+
+            </div>
+        </section>
+
+
+
+
+        <section class="resultado">
+
+            <div class="sintexto">
+                <img class="imgresultado" src="imagenes/Muñeco.png" alt="Muñeco con lupa desifrando el codigo">
+                <div class="mensajes">
+                    <p class="mensaje1">Ningún mensaje fue encontrado</p>
+                    <p class="mensaje2">Ingresa el texto que desees encriptar o desencriptar.</p>
+                </div>
+            </div>
+
+        </section>
+
+
+
+
+    </main>
+
+
+
+
 </body>
+
 </html>
+
+
+<script>
+
+
+
+    function revisarCaracteres(evento) {
+        tecla = (document.all) ? evento.keyCode : evento.which;
+        //Tecla de retroceso para borrar, siempre la permite
+        if (tecla == 8) {
+            return true;
+        }
+        // Patrón de entrada, en este caso solo acepta letras
+        patron = /[A-Za-z]/;
+        tecla_final = String.fromCharCode(tecla);
+        return patron.test(tecla_final);
+        
+    }
+
+
+
+    function mayus(e) {
+        e.value = e.value.toUpperCase();
+    }
+
+
+
+    function encriptar() {
+        cadena = document.getElementById('entrada').value;
+
+        for (i = 0; i < cadena.length; i++) {
+            alert(cadena.charAt(i))
+        }
+
+
+
+    }
+
+    document.getElementById('entrada').onkeydown = revisarCaracteres;
+
+    document.getElementById('encriptar').onclick = encriptar;
+</script>
